@@ -9,13 +9,12 @@
     <link rel="stylesheet" href="{% static 'style.css' %}">
 </head>
 <body>
-    <a href="{% url 'core:agregarfecha' %}"><button>Agregar Fecha</button></a>
-    <h1>Agenda de Maria</h1>
-    <h6>V1.0</h6>
-    {% for agenda in fechas %}
-        <p>{{agenda.descripcion}}</p>
-        <p>{{agenda.fecha}}</p>
-    {% endfor %}
+    <h1>Ingrese la Descripcion y la Fecha para la Agenda</h1>
+    <br>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Enviar</button>
+    </form>
 </body>
 </html>
-
