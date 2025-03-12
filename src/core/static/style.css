@@ -1,5 +1,5 @@
 body {
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-family: Georgia, 'Times New Roman', Times, serif, 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     text-align: center;
     background-image: url(fondo.jpg);
 }
@@ -10,19 +10,20 @@ button {
     cursor: pointer;
     padding: 10px 30px;
     border-radius: 28px;
-    background-color: aqua;
-    color: black;
+    background-color: hotpink;
+    color: white;
 }
 
 button:hover {
-    background-color: darkblue;
+    background-color: mediumpurple;
     color: white;
 }
 
 header {
     background-size: cover;
-    color: gold;
-    padding: 2rem 1rem;
+    color: darksalmon;
+    border-style: inset;
+    border: 0.5rem;
 }
 
 header h1 {
@@ -72,10 +73,4 @@ table th, td {
 
 table td {
     font-size: 1.5rem;
-}
-
-#datos {
-    float: left;
-    margin-top: 47px;
-    list-style: none;
 }
