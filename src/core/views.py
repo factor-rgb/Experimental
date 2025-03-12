@@ -15,3 +15,8 @@ class AgendaCreateView(CreateView):
     model = Agenda
     form_class = AgendaForm
     success_url = reverse_lazy('core:index')
+
+def mes(request):
+      query = Agenda.objects.all()
+      context = {"fechas": query}
+      return render(request, "core/month-view.html", context)

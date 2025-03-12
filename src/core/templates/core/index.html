@@ -7,15 +7,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Agenda</title>
     <link rel="stylesheet" href="{% static 'style.css' %}">
+    <link rel="stylesheet" href="{% static 'index.global.js' %}">
+    <script src="{% static 'index.global.js' %}"></script>
 </head>
 <body>
-    <a href="{% url 'core:agregarfecha' %}"><button>Agregar Fecha</button></a>
-    <h1>Agenda de Maria</h1>
+    <a href="{% url 'core:mes' %}"><button>Agregar Fecha</button></a>
+    <h1>Agenda de MariainitialDate: '2025-03-12',</h1>
     <h6>V1.0</h6>
-    {% for agenda in fechas %}
-        <p>{{agenda.descripcion}}</p>
-        <p>{{agenda.fecha}}</p>
-    {% endfor %}
 </body>
 </html>
 
