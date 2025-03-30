@@ -10,8 +10,7 @@ button {
     cursor: pointer;
     padding: 10px 30px;
     border-radius: 28px;
-    background-color: hotpink;
-    color: white;
+    background-image: url(boton.png);
 }
 
 button:hover {

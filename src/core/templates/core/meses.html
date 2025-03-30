@@ -21,8 +21,7 @@
       },
       businessHours: true,
       eventClick: function(arg) {
-        if (confirm('Are you sure you want to delete this event?')) {
-          arg.event.remove()
+        if (confirm('Quieres Borrar Este Evento?')) {
         }
       },
       dayMaxEvents: true, // allow "more" link when too many events
@@ -32,6 +31,7 @@
                 title: '{{ agenda.descripcion }}',
                 start: '{{ agenda.fecha_inicio | date:"Y-m-d" }}',
                 end: '{{ agenda.fecha_final | date:"Y-m-d" }}',
+                url: '{% url 'core:borrar' agenda.id %}',
               },
           {% endfor %}
       ]
@@ -60,7 +60,7 @@
 <body>
 
   <div id='calendar'></div>
-
+  <br>
   <h1>Ingrese la Descripcion y la Fecha para la Agenda</h1>
   <br>
   <form method="post">

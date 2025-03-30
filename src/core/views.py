@@ -2,9 +2,6 @@ from django.shortcuts import render, redirect
 from .models import Agenda
 from .forms import AgendaForm
 
-from django.views.generic import CreateView
-from django.urls import reverse_lazy
-
 
 def index(request):
       query = Agenda.objects.all()
@@ -25,3 +22,10 @@ def mes(request):
 
 def prueba(request):
      return render(request, "core/selectable.html")
+
+def borrar_evento(request, pk):
+      query = Agenda.objects.get(id=pk)
+      if request.method == 'POST':
+            query.delete()
+            return redirect('core:meses')
+      return render(request, 'core/confirmacion.html', {'object': query})
