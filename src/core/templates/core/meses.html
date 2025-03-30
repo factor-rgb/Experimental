@@ -4,6 +4,8 @@
 <html>
 <head>
 <meta charset='utf-8' />
+<title>Agenda</title>
+<link rel="stylesheet" href="{% static 'style.css' %}">
 <script src='{% static 'index.global.js' %}'></script>
 <script src='{% static 'locales-all.global.js' %}'></script>
 <script>
@@ -18,6 +20,11 @@
         center: 'title',
       },
       businessHours: true,
+      eventClick: function(arg) {
+        if (confirm('Are you sure you want to delete this event?')) {
+          arg.event.remove()
+        }
+      },
       dayMaxEvents: true, // allow "more" link when too many events
       events: [
           {% for agenda in fechas %}
@@ -53,6 +60,14 @@
 <body>
 
   <div id='calendar'></div>
+
+  <h1>Ingrese la Descripcion y la Fecha para la Agenda</h1>
+  <br>
+  <form method="post">
+      {% csrf_token %}
+      {{ form.as_p }}
+      <button type="submit">Enviar</button>
+  </form>
 
 </body>
 </html>
