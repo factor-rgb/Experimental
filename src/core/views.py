@@ -18,7 +18,7 @@ def mes(request):
             form = AgendaForm(request.POST)
             if form.is_valid():
                   form.save()
-            return redirect('core:mes')
+            return redirect('core:meses')
 
 def prueba(request):
      return render(request, "core/selectable.html")
