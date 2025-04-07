@@ -1,13 +1,11 @@
 body {
     font-family: Georgia, 'Times New Roman', Times, serif, 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    background-image: url(background_pc.jpg);
-    background-size: cover;
+    background-color: blueviolet;
     text-align: center;
 }
 
 header img {
     width: 640px;
-    height: 350;
 }
 
 .buttons {
@@ -16,27 +14,26 @@ header img {
     margin: auto;
 }
 
-form input {
-    padding: 10px;
+.form_fecha input {
+    padding: 15px;
     border-style: ridge;
     border-radius: 30px;
-    border-color: darkorchid;
+    border-color: mediumvioletred;
 }
 
-form ul {
+.form_fecha ul {
     list-style: none;
 }
 
-form label {
+.form_fecha label {
     padding-right: 2px;
-    font-size: 25px;
+    font-size: 35px;
 }
 
 @media (max-width: 450px) {
     body {
         font-family: Georgia, 'Times New Roman', Times, serif;
-        background-image: url(background_movile.jpg);
-        background-size: cover;
+        background-color: violet;
     }
 
     .buttons {
@@ -48,5 +45,17 @@ form label {
     header img {
         max-width: 370px;
         max-height: 390px;
+    }
+
+    .form_fecha input {
+        padding: 100px;
+        border-style: ridge;
+        border-radius: 30px;
+        border-color: black;
+    }
+
+    .form_fecha label {
+        padding-right: 2px;
+        font-size: 35px;
     }
 }
