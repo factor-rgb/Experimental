@@ -65,9 +65,9 @@
   <form method="post">
       {% csrf_token %}
       {{ form.as_p }}
-      <button type="submit">Enviar</button>
+      <button type="submit" style="background: none; border: 0px;"><img src="{% static 'button_aceptar.png' %}" class="buttons"></button>
   </form>
-  <a href="{% url 'core:index' %}"><button>Volver</button></a>
+  <a href="{% url 'core:index' %}"><img src="{% static 'button_volver.png' %}" class="buttons"></a>
 
 </body>
 </html>

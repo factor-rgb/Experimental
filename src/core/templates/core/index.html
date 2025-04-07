@@ -12,11 +12,12 @@
 </head>
 <body>
     <header>
-        <img src="{% static 'portada.png' %}" height="490px">
+        <img src="{% static 'portada.png' %}">
     </header>
-    <h5>V4.0</h5>
     <br>
-    <a href="{% url 'core:meses' %}"><button>Meses</button></a>
+    <div class="buttons">
+        <a href="{% url 'core:meses' %}"><img src="{% static 'button_meses.png' %}" class="buttons"></a>
+    </div>
 </body>
 </html>
 

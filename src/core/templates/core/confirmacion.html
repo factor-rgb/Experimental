@@ -12,9 +12,9 @@
     <h1>Estas Seguro de Borrar el Evento "{{ object.descripcion }}"</h1>
     <form method="post">
         {% csrf_token %}
-        <button type="submit">Confirmar</button>
+        <button type="submit" style="background: none; border: 0px;"><img src="{% static 'button_aceptar.png' %}" class="buttons"></button>
     </form>
     <br>
-    <a href="{% url 'core:meses' %}"><button>Volver</button></a>
+    <a href="{% url 'core:meses' %}"><img src="{% static 'button_volver.png' %}" class="buttons"></a>
 </body>
 </html>

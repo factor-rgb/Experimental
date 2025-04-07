@@ -1,39 +1,25 @@
 body {
     font-family: Georgia, 'Times New Roman', Times, serif, 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-image: url(background_pc.jpg);
+    background-size: cover;
     text-align: center;
-    background-image: url(fondo.jpg);
-    background-size: cover;
 }
 
-button {
-    margin-right: 0px;
-    font-size: large;
+header img {
+    width: 640px;
+    height: 350;
+}
+
+.buttons {
     cursor: pointer;
-    padding: 10px 30px;
-    border-radius: 25px;
-    background-color: deeppink;
-}
-
-button:hover {
-    background-color: fuchsia;
-    color: whitesmoke;
-}
-
-header {
-    background-size: cover;
-    color: darksalmon;
-    border-style: inset;
-    border: 0.5rem;
-}
-
-header h1 {
-    cursor: default;
-    font-size: 4rem;
+    width: 250px;
+    margin: auto;
 }
 
 form input {
     padding: 10px;
     border-style: ridge;
+    border-radius: 30px;
     border-color: darkorchid;
 }
 
@@ -46,9 +32,21 @@ form label {
     font-size: 25px;
 }
 
-select {
-    cursor: pointer;
-    padding: 10px;
-    border-color: cyan;
-    border-radius: 20px;
+@media (max-width: 450px) {
+    body {
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        background-image: url(background_movile.jpg);
+        background-size: cover;
+    }
+
+    .buttons {
+        margin: auto;
+        cursor: pointer;
+        width: 100%;
+    }
+
+    header img {
+        max-width: 370px;
+        max-height: 390px;
+    }
 }
