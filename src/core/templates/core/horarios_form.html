@@ -5,16 +5,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Agenda</title>
+    <title>Horario</title>
     <link rel="stylesheet" href="{% static 'style.css' %}">
 </head>
 <body>
-    <h1>Estas Seguro de Borrar el Evento "{{ object.name }}"</h1>
-    <form method="post">
+    <form method="post" class="form_fecha">
         {% csrf_token %}
+        {{ form_horario.as_p }}
         <button type="submit" style="background: none; border: 0px;"><img src="{% static 'button_aceptar.png' %}" class="buttons"></button>
-    </form>
-    <br>
-    <a href="{% url 'core:meses' %}"><img src="{% static 'button_volver.png' %}" class="buttons"></a>
+      </form>
 </body>
 </html>
+

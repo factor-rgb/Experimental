@@ -8,4 +8,5 @@ urlpatterns = [
     path("agenda/mes/", views.mes, name="meses"),
     path("agenda/prueba/", views.prueba, name="prueba"),
     path("agenda/borrarevento/<int:pk>", views.borrar_evento, name="borrar"),
+    path("agenda/horario/", views.crear_asunto, name="crear_asunto"),
 ]

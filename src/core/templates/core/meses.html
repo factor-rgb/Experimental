@@ -24,9 +24,16 @@
       events: [
           {% for agenda in fechas %}
               {
-                title: '{{ agenda.descripcion }}',
+                title: '{{ agenda.nombre }}',
                 start: '{{ agenda.fecha_inicio | date:"Y-m-d" }}',
                 end: '{{ agenda.fecha_final | date:"Y-m-d" }}',
+                url: '{% url 'core:borrar' agenda.id %}',
+              },
+          {% endfor %}
+          {% for agenda in horas %}
+              {
+                title: '{{ agenda.asunto }}',
+                start: '{{ agenda.hora | date:"Y-m-d H:m" }}',
                 url: '{% url 'core:borrar' agenda.id %}',
               },
           {% endfor %}
@@ -61,10 +68,10 @@
   <br>
   <form method="post" class="form_fecha">
       {% csrf_token %}
-      {{ form.as_p }}
+      {{ form_agenda.as_p }}
       <button type="submit" style="background: none; border: 0px;"><img src="{% static 'button_aceptar.png' %}" class="buttons"></button>
       <a href="{% url 'core:index' %}"><img src="{% static 'button_volver.png' %}" class="buttons"></a>
   </form>
-
+  <a href="{% url 'core:crear_asunto' %}">si</a>
 </body>
 </html>
