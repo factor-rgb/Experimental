@@ -5,15 +5,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Horario</title>
+    <title>Evento</title>
     <link rel="stylesheet" href="{% static 'style.css' %}">
 </head>
 <body>
+    {% if form.instance.pk %}
+        <h1>Revisar Evento</h1>
+        <a href="{% url 'core:borrar_evento' agenda.id %}"><img src="{% static 'button_borrar_evento.png' %}" class="buttons"></a>
+    {% else %}
+        <h1>Crear Evento</h1>
+    {% endif %}
     <form method="post" class="form_fecha">
         {% csrf_token %}
-        {{ form_horario.as_p }}
+        {{ form.as_p }}
         <button type="submit" style="background: none; border: 0px;"><img src="{% static 'button_aceptar.png' %}" class="buttons"></button>
-      </form>
+    </form>
+    <a href="{% url 'core:index' %}"><img src="{% static 'button_volver.png' %}" class="buttons"></a>
 </body>
 </html>
 

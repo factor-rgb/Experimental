@@ -15,4 +15,4 @@ class HorariosForm(forms.ModelForm):
     class Meta:
         model = Horarios
         fields = "__all__"
-        widgets = {'fecha_inicio': forms.DateTimeInput(attrs={"type": "datetime-local"})}
+        widgets = {'hora': forms.DateTimeInput(attrs={"type": "datetime-local"})}
