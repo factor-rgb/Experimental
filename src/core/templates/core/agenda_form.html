@@ -11,7 +11,9 @@
 <body>
     {% if form.instance.pk %}
         <h1>Revisar Evento</h1>
+        <br>
         <a href="{% url 'core:borrar_evento' agenda.id %}"><img src="{% static 'button_borrar_evento.png' %}" class="buttons"></a>
+        <h1>Modificar</h1>
     {% else %}
         <h1>Crear Evento</h1>
     {% endif %}

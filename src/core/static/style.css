@@ -1,6 +1,6 @@
 body {
     font-family: Georgia, 'Times New Roman', Times, serif, 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    background-color: moccasin;
+    background-color: pink;
     text-align: center;
 }
 
@@ -26,16 +26,11 @@ header img {
 }
 
 .form_fecha label {
-    padding-right: 2px;
+    padding-right: 5px;
     font-size: 35px;
 }
 
 @media (max-width: 450px) {
-    body {
-        font-family: Georgia, 'Times New Roman', Times, serif;
-        background-color: violet;
-    }
-
     .buttons {
         margin: auto;
         cursor: pointer;
@@ -48,14 +43,19 @@ header img {
     }
 
     .form_fecha input {
-        padding: 100px;
+        padding: 19px;
+        font-size: 20px;
         border-style: ridge;
         border-radius: 30px;
-        border-color: black;
+        border-color: mediumvioletred;
     }
-
+    
+    .form_fecha ul {
+        list-style: none;
+    }
+    
     .form_fecha label {
-        padding-right: 2px;
-        font-size: 35px;
+        padding-right: 14px;
+        font-size: 55px;
     }
 }
